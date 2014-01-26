@@ -6,6 +6,7 @@ T::Application.routes.draw do
 
   resources :users
   resources :sessions
+  resources :portfolios
 
   root 'static_pages#home'
   

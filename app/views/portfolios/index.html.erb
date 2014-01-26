@@ -1,0 +1,14 @@
+<% @portfolios.each do |portfolio| %>
+
+<%= image_tag portfolio.image.url(:portfolio) %><br/>
+<%= portfolio.title %><br/>
+<%= portfolio.body %><br/>
+<%= link_to 'edit', edit_portfolio_path(portfolio) %> |
+<%= link_to 'delete', portfolio, confirm: 'Are you Sure?', method: :delete %>
+
+<hr>
+<%end%>
+<%= link_to 'New', new_portfolio_path %>
+
+
+ 
