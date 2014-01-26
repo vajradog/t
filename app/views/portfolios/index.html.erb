@@ -1,14 +1,28 @@
+<section class="content">
+<article class="work">
+<h2>My projects</h2>
+<p><%= link_to 'New', new_portfolio_path %></p>
+
+<ul class="projects">
 <% @portfolios.each do |portfolio| %>
+<li>
+<figure>
+<a href="project-1.html">
+<%= image_tag portfolio.image.url(:portfolio) %>
+<div>
+<span class="icon-folder"></span>
+</div>
+</a>
+<figcaption>
+<h4><%= portfolio.title %></h4>
+<p><%= portfolio.body %></p>
+<p><%= link_to 'edit', edit_portfolio_path(portfolio) %><%= link_to 'delete', portfolio, confirm: 'Are you Sure?', method: :delete %></p>
 
-<%= image_tag portfolio.image.url(:portfolio) %><br/>
-<%= portfolio.title %><br/>
-<%= portfolio.body %><br/>
-<%= link_to 'edit', edit_portfolio_path(portfolio) %> |
-<%= link_to 'delete', portfolio, confirm: 'Are you Sure?', method: :delete %>
 
-<hr>
+</figcaption>
+</figure>
+</li>
+
 <%end%>
-<%= link_to 'New', new_portfolio_path %>
 
-
- 
+	
