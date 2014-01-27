@@ -1,0 +1,9 @@
+<nav id="nav">
+  <ul class="nav">
+    <li><%= image_tag "logo.jpg" %></li>
+    <li><%= link_to(root_path, :class=>"icon-user") do %><span>Profile</span><%end%></li>
+    <li><%= link_to(portfolios_path, :class=>"icon-briefcase") do %><span>Work</span><%end%></li>
+    <li><%= link_to(pages_resume_path, :class=>"icon-list") do %><span>Resume</span><%end%></li>
+    <li><%= link_to(pages_contact_path, :class=>"icon-mail") do %><span>Contact</span><%end%></li>
+  </ul>
+</nav>

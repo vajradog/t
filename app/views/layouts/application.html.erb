@@ -1,90 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<title>Thupten</title>
-	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-
-<!--  -->
-<!doctype html>
-
-	<link rel="shortcut icon" href="favicon.ico">
-
-	<!-- Add your CSS files here -->
-	<link rel="stylesheet" href="css/normalize.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/red.css">
-
-	<!-- Add your Fonts here -->
-	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-
-</head>
-<body>
-
-<div class="container">
-
-	<div class="logo"><img src="img/logo.svg" alt="Logo"></div>
-
-	<div class="social">
-		<a href="http://facebook.com/rocketthemes" class="icon-facebook" title="Facebook"></a>
-		<a href="http://twitter.com/rocketthemes" class="icon-twitter" title="Twitter"></a>
-		<a href="#" class="icon-googleplus" title="Googleplus"></a>
-		<a href="#" class="icon-dribbble" title="Dribbble"></a>
-		<a href="#" class="icon-behance" title="Behance"></a>
-		<a href="#" class="icon-instagram" title="Instagram"></a>
-		<a href="#" class="icon-flickr" title="Flickr"></a>
-	</div>
-<% if current_user %>
-          Logged in as <%= current_user.email %>.
-          <%= link_to "Log Out", logout_path %>
-        <% else %>
-          <%= link_to "Sign Up", signup_path %> or
-          <%= link_to "Log In", login_path %>
-        <% end %>
-
-	<!-- Social Icons End -->
-
-	<header>
-		<nav id="nav">
-			<ul class="nav">
-				<li><img src="img/logo.svg" alt="My Logo"></li>
-				<li class="active"><a href="index.html" class="icon-user"><span>Profile</span></a></li>
-				<li><a href="portfolios" class="icon-briefcase"><span>Work</span></a></li>
-				<li><a href="static_pages/resume" class="icon-list"><span>Resume</span></a></li>
-				<li><a href="static_pages/contact" class="icon-mail"><span>Contact</span></a></li>
-			</ul>
-		</nav>
-	</header>
-	<!-- Header End -->
-
-	<%= yield %>
-	<!-- Content End -->
-
-
-<!-- Container End -->
-
-<!-- Scripts -->
-<script src="js/jquery-1.10.2.min.js"></script>
-<script src="js/plugins.js"></script>
-
-<script>
-      var navigation = responsiveNav("#nav", {
-        animate: true,        // Boolean: Use CSS3 transitions, true or false
-        transition: 400,      // Integer: Speed of the transition, in milliseconds
-        label: "",            // String: Label for the navigation toggle
-        insert: "before",     // String: Insert the toggle before or after the navigation
-        customToggle: "",     // Selector: Specify the ID of a custom toggle
-        openPos: "relative",  // String: Position of the opened nav, relative or static
-        jsClass: "js",        // String: 'JS enabled' class which is added to <html> el
-        init: function(){},   // Function: Init callback
-        open: function(){},   // Function: Open callback
-        close: function(){}   // Function: Close callback
-      });
-</script>
-
-</body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Thupten</title>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/fonts' %>
+  </head>
+  <body>
+    <div class="container">
+    <div class="logo"><%= image_tag "logo.jpg" %></div>
+    <%= render 'layouts/social'%>
+    <%= render 'layouts/header' %>
+    <%= yield %>
+    
+  </body>
 </html>

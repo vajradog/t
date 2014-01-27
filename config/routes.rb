@@ -1,4 +1,9 @@
 T::Application.routes.draw do
+  root 'pages#home'
+  
+  get "pages/about"
+  get "pages/resume"
+  get "pages/contact"
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
@@ -8,11 +13,7 @@ T::Application.routes.draw do
   resources :sessions
   resources :portfolios
 
-  root 'static_pages#home'
-  
-  get "static_pages/about"
-  get "static_pages/resume"
-  get "static_pages/contact"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
