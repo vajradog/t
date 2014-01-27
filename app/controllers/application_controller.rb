@@ -11,7 +11,6 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def authorize
-  	redirect_to login_url, alert: "Please login first" if current_user.nil?
-  	
+  	redirect_to login_url, alert: "Not Authorised" if current_user.nil?
   end
 end

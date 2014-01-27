@@ -16,7 +16,7 @@
 <figcaption>
 <h4><%= portfolio.title %></h4>
 <p><%= portfolio.body %></p>
-
+<p><%= link_to 'edit', edit_portfolio_path(portfolio) %><%= link_to 'delete', portfolio, confirm: 'Are you Sure?', method: :delete %></p>
 </figcaption>
 </figure>
 </li>

@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-
+before_filter :authorize, only: [:edit, :update, :destroy]
   def new
     @portfolio = Portfolio.new
   end
