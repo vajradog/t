@@ -297,7 +297,7 @@ ul {
     font-size: 1.2rem;
     font-weight: 700;
     line-height: 1.5;
-    color: black;
+    color: #e74c3c;
 }
 
 /* ---- Line ----- */
@@ -320,7 +320,7 @@ ul {
     font-family: 'entypo';
     font-size: 1.8rem;
     line-height: 40px;
-    color: black;
+    color: #e74c3c;
     -webkit-font-smoothing: antialiased;
     speak: none;
     float: left;
