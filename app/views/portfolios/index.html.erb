@@ -9,7 +9,7 @@
         <%= image_tag portfolio.image.url(:portfolio) %>
       <figcaption>
       <h4><%= portfolio.title %></h4>
-      <p><%= portfolio.body %></p>
+      <p><%= raw portfolio.body %></p>
       
       <% if current_user %>
         <p><%= link_to 'edit', edit_portfolio_path(portfolio) %> 
