@@ -25,7 +25,7 @@ gem 'jbuilder', '1.0.2'
 gem 'bcrypt-ruby'
 gem 'paperclip', '3.4.0'
 gem 'will_paginate'
-# gem 'rack-zippy'
+gem 'rack-zippy'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false

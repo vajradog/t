@@ -1,8 +1,8 @@
 <article class="p-details profile">
-<% if current_user %>
-  Logged in as <%= current_user.email %>
-  <%= link_to "Log Out", logout_path %>
-<% else %> 
-   <%= link_to " Log-in to edit, delete or add a new project", login_path %> 
-<% end %>
+  <% if current_user %>
+    Logged in as <%= current_user.email %>
+    <%= link_to "Log Out", logout_path %>
+  <% else %> 
+    <%= link_to " Log-in to edit, delete or add a new project", login_path %> 
+  <% end %>
 </article> 

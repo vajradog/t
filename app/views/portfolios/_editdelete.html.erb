@@ -1,1 +1,5 @@
- <% if current_user %><p><%= link_to 'edit', edit_portfolio_path(portfolio) %> <%= link_to 'delete', portfolio, confirm: 'Are you Sure?', method: :delete %></p>  <%end%>  
+<% if current_user %>
+  <p><%= link_to 'edit', edit_portfolio_path(portfolio) %> 
+  	<%= link_to 'delete', portfolio, confirm: 'Are you Sure?', method: :delete %>
+  </p>  
+<%end%>  
