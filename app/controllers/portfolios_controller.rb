@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-before_filter :authorize, only: [:edit, :update, :destroy]
+before_filter :authorize, only: [:new, :edit, :update, :destroy]
   def new
     @portfolio = Portfolio.new
   end
@@ -34,7 +34,7 @@ before_filter :authorize, only: [:edit, :update, :destroy]
   end
 
    def show
-    @portfolio = Portfolio.all
+    @portfolio = Portfolio.find(params[:id])
   end
 
 

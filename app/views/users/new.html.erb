@@ -1,24 +1,10 @@
 <section class="content">
-
-<%= render 'users/errors' %>
-
-
-
-<h1>Sign Up</h1>
-<div class="contact">
-<%= form_for @user do |f| %>
-
-
-  <%= f.label :email %><%= f.text_field :email %><br />
-
-
-    <%= f.label :password %><%= f.password_field :password %><br />
-
-    <%= f.label :password_confirmation %><%= f.password_field :password_confirmation %><br />
-
-  <div class="actions"><%= f.submit "Sign Up" %></div>
-
-</article>
-</div>
-<% end %>
+  <%= render 'users/errors' %>
+  <h1>Sign Up</h1>
+    <%= form_for @user do |f| %>
+    <%= f.label :email %><br/><%= f.text_field :email %><br />
+    <%= f.label :password %><br/><%= f.password_field :password %><br />
+    <%= f.label :password_confirmation %><br/><%= f.password_field :password_confirmation %><br />
+    <%= f.submit "Sign Up" %>
+  <% end %>
 </section>

@@ -1,39 +1,34 @@
 <section class="content">
-<article class="work">
+  <article class="work">
 
-	<% if current_user %>
-      Logged in as <%= current_user.email %>.
-      <%= link_to "Log Out", logout_path %>
-    <% else %>
-      <%= link_to "Sign Up", signup_path %> or
-      <%= link_to "Log In", login_path %>
-    <% end %>
 
+<div><%= notice %>
+    <h2>My projects</h2>
+
+    <ul class="projects">
+    <% @portfolios.each do |portfolio| %>
+    <li>
+    <figure>
+      <%= image_tag portfolio.image.url(:portfolio) %>
+    <figcaption>
+      <h4><%= portfolio.title %></h4>
+      <p><%= portfolio.body %></p>
+      <p><%= link_to 'edit', edit_portfolio_path(portfolio) %> <%= link_to 'delete', portfolio, confirm: 'Are you Sure?', method: :delete %></p>
+    </figcaption>
+    </figure>
     
-<h2>My projects</h2>
-<p><%= link_to 'New', new_portfolio_path %></p>
-<ul class="projects">
-<% @portfolios.each do |portfolio| %>
-<li>
-<figure>
-<a href="project-1.html">
-<%= image_tag portfolio.image.url(:portfolio) %>
-<div>
-<span class="icon-folder"></span>
-</div>
-</a>
-<figcaption>
-<h4><%= portfolio.title %></h4>
-<p><%= portfolio.body %></p>
-<p><%= link_to 'edit', edit_portfolio_path(portfolio) %><%= link_to 'delete', portfolio, confirm: 'Are you Sure?', method: :delete %></p>
-</figcaption>
-</figure>
-</li>
-<%end%>
 
-</ul>
-    <div class="page_info">
-      <%= page_entries_info @portfolios %>
-    </div>
+    </li>
+    <%end%>
+     </ul>
+     </div>
+
+<p><%= link_to 'New', new_portfolio_path %></p>
+
+
+
+    <div class="page_info", align="center">
+      <font color="grey"></p><%= page_entries_info @portfolios %><br/>
+   
     <%= will_paginate @portfolios, :container => false %>
-  </div>
+  </div></font>
