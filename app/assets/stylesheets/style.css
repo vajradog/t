@@ -231,11 +231,11 @@ ul {
 }
 
 .p-details a {
-    padding: 6px 7px;
+    padding: 3px 5px;
     background: #e74c3c;
     color: white;
     border-radius: 4px;
-    margin-right: 10px;
+    margin-right: 2px;
     -webkit-transition: all 275ms ease-in-out;
        -moz-transition: all 275ms ease-in-out;
         -ms-transition: all 275ms ease-in-out;
