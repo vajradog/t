@@ -24,6 +24,7 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 gem 'bcrypt-ruby'
 gem 'paperclip', '3.4.0'
+gem 'aws-sdk'
 gem 'will_paginate'
 # gem 'rack-zippy'
 
