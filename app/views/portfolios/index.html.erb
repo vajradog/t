@@ -7,7 +7,7 @@
       <% @portfolios.each do |portfolio| %>
       <li>
       <figure>
-        <%= image_tag portfolio.image.url %>
+        <%= image_tag portfolio.image.url(:portfolio) %>
       <figcaption>
       <h4><%= portfolio.title %></h4>
       <p><%= raw portfolio.body %></p>

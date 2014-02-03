@@ -6,7 +6,6 @@ class Portfolio < ActiveRecord::Base
   # validates :user_id, presence: true
 		has_attached_file :image, 
 		:storage => :s3,
-		:url => "s3_domain_url",
 		:s3_protocol => 'http',
 		:s3_credentials => {
 		:bucket => ENV['S3_BUCKET_NAME'],
