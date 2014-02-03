@@ -7,7 +7,6 @@ class Portfolio < ActiveRecord::Base
 		has_attached_file :image, 
 		:storage => :s3,
 		:bucket => ENV['S3_BUCKET_NAME'],
-
 		# :url => "s3_domain_url",
 		:s3_credentials => {
         :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
