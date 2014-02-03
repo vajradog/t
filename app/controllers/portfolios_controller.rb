@@ -4,10 +4,14 @@ before_filter :authorize, only: [:new, :edit, :update, :destroy]
     @portfolio = Portfolio.new
   end
 
-   def create
+  def create
     @portfolio = Portfolio.new(portfolio_params)
-    @portfolio.save
-    redirect_to portfolios_path
+     if @portfolio.save
+       redirect_to portfolios_path, notice: "New Portfolio Added"
+     else
+       render 'new', notice: "Something wrong with a field"
+     end
+
   end
 
    def index

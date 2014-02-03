@@ -1,6 +1,7 @@
 <section class="content">
   <article class="work">
     <div><%= notice %>
+
       <h2>My projects</h2>
       <ul class="projects">
       <% @portfolios.each do |portfolio| %>
@@ -23,9 +24,9 @@
       <%end%>
        </ul>
     </div>
-    <%= render 'portfolios/addproject' %>
-    <%= render 'portfolios/login' %> 
-    <%= render 'portfolios/paginate' %>
+    <%= render 'addproject' %>
+    <%= render 'login' %> 
+    <%= render 'paginate' %>
 
   </article>
 </section>
