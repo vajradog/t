@@ -15,7 +15,7 @@ before_filter :authorize, only: [:new, :edit, :update, :destroy]
   end
 
    def index
-    @portfolios = Portfolio.paginate(:page => params[:page], :per_page => 10)
+    @portfolios = Portfolio.paginate(:page => params[:page], :per_page => 12)
   end
 
   def edit
